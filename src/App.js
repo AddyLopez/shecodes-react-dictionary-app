@@ -1,10 +1,11 @@
-import "./App.css";
+import "./styles/App.css";
+import Dictionary from "./Dictionary";
 import Footer from "./Footer";
 
 function App() {
   return (
     <div className="App">
-      Hello from App!
+      <Dictionary />
       <Footer />
     </div>
   );
