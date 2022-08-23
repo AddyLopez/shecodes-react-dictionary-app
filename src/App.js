@@ -5,7 +5,10 @@ import "./styles/App.css";
 function App() {
   return (
     <div className="App">
-      <Dictionary />
+      <header>
+        <h1>React Dictionary Application</h1>
+      </header>
+      <Dictionary defaultSearchWord="turtle" />
       <Footer />
     </div>
   );

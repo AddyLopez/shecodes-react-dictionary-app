@@ -1,17 +1,21 @@
 import React, { useState } from "react";
 import axios from "axios";
+import DictionaryEntry from "./DictionaryEntry";
 import "./styles/Dictionary.css";
 
-export default function Dictionary() {
-  const [searchWord, setSearchWord] = useState(null);
+export default function Dictionary(props) {
+  const [searchWord, setSearchWord] = useState(props.defaultSearchWord);
+  const [entryData, setEntryData] = useState(null);
 
   const handleDictionaryResponse = (response) => {
     console.log(response.data[0]);
+    setEntryData(response.data[0]);
   };
 
   const search = (event) => {
     event.preventDefault();
 
+    // DOCUMENTATION: https://dictionaryapi.dev/
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${searchWord}`;
     axios.get(apiUrl).then(handleDictionaryResponse);
   };
@@ -20,13 +24,12 @@ export default function Dictionary() {
     setSearchWord(event.target.value);
   };
 
-  // https://api.dictionaryapi.dev/api/v2/entries/en_US/turtle
-
   return (
     <div className="Dictionary">
       <form onSubmit={search}>
         <input type="search" autoFocus={true} onChange={updateSearchWord} />
       </form>
+      <DictionaryEntry entryData={entryData} />
     </div>
   );
 }
