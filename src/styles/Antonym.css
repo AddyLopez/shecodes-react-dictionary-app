@@ -1,21 +1,23 @@
-.Synonym {
+.Antonym {
   margin-inline-start: 20px;
 }
 
-.Synonym span {
+.Antonym span {
   opacity: 0.6;
   font-size: 19px;
 }
-.Synonym button {
+.Antonym button {
   border-radius: 6px;
   margin: 4px 0 4px 6px;
   padding: 6px;
   opacity: 0.6;
   font-weight: 500;
-}
-
-.Synonym button:hover {
-  cursor: pointer;
   color: white;
   background-color: darkgray;
+}
+
+.Antonym button:hover {
+  cursor: pointer;
+  color: black;
+  background-color: white;
 }
