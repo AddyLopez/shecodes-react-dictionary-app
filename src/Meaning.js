@@ -2,8 +2,6 @@ import React from "react";
 import "./styles/Meaning.css";
 
 export default function Meaning(props) {
-  console.log(props.meaning);
-  console.log(props.word);
   return (
     <div className="Meaning">
       <dd className="part-of-speech">
