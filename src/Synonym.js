@@ -1,13 +1,13 @@
 import React from "react";
-import "./styles/Synonyms.css";
+import "./styles/Synonym.css";
 
-export default function Synonyms(props) {
-  console.log(props.synonyms);
+export default function Synonym(props) {
+  console.log(props.synonym);
   // This conditional rendering accounts for the presence or absence of the "synonyms" category under "definitions," passed into this component as "props.synonyms.""
-  if (props.synonyms) {
+  if (props.synonym) {
     return (
-      <dd className="Synonyms">
-        {props.synonyms.map((synonym, index) => {
+      <dd className="Synonym">
+        {props.synonym.map((synonym, index) => {
           return <span key={index}>{synonym} </span>;
         })}
       </dd>

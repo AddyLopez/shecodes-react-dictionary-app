@@ -1,9 +1,9 @@
-.Examples {
+.Example {
   margin-inline-start: 40px;
   opacity: 0.6;
   font-style: italic;
 }
-.Examples .example-indicator {
+.Example .example-indicator {
   font-style: normal;
   font-weight: 600;
 }
