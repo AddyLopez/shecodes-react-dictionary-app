@@ -14,6 +14,7 @@ export default function DictionaryEntry(props) {
               <Meaning
                 word={props.entryData.word}
                 meaning={meaning}
+                searchRelatedTerm={props.searchRelatedTerm}
                 key={index}
               />
             );

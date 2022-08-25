@@ -24,8 +24,14 @@ export default function Meaning(props) {
           </div>
         );
       })}
-      <Synonym synonyms={props.meaning.synonyms} />
-      <Antonym antonyms={props.meaning.antonyms} />
+      <Synonym
+        synonyms={props.meaning.synonyms}
+        searchRelatedTerm={props.searchRelatedTerm}
+      />
+      <Antonym
+        antonyms={props.meaning.antonyms}
+        searchRelatedTerm={props.searchRelatedTerm}
+      />
     </div>
   );
 }

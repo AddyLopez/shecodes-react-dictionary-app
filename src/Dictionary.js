@@ -10,37 +10,42 @@ export default function Dictionary(props) {
 
   const handleDictionaryResponse = (response) => {
     setEntryData(response.data[0]);
+    setLoaded(true);
   };
 
   const search = () => {
-    // DOCUMENTATION: https://dictionaryapi.dev/
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${searchWord}`;
     axios.get(apiUrl).then(handleDictionaryResponse);
+  };
+
+  const updateSearchWord = (event) => {
+    setSearchWord(event.target.value);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     search();
   };
-  const updateSearchWord = (event) => {
-    setSearchWord(event.target.value);
+
+  const searchRelatedTerm = (string) => {
+    setSearchWord(string);
+    search();
   };
 
-  const loadDictionary = () => {
-    search();
-    setLoaded(true);
-  };
   if (loaded) {
     return (
       <div className="Dictionary">
         <form onSubmit={handleSubmit}>
           <input type="search" autoFocus={true} onChange={updateSearchWord} />
         </form>
-        <DictionaryEntry entryData={entryData} />
+        <DictionaryEntry
+          entryData={entryData}
+          searchRelatedTerm={searchRelatedTerm}
+        />
       </div>
     );
   } else {
-    loadDictionary();
+    search();
     return <div>Loading...</div>;
   }
 }
