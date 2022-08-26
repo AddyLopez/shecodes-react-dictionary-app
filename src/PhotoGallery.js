@@ -9,11 +9,18 @@ export default function PhotoGallery(props) {
           {props.photos.map((photo, index) => {
             return (
               <div className="col-4" key={index}>
-                <img
-                  src={photo.src.landscape}
-                  alt={photo.alt}
-                  className="img-fluid"
-                />
+                <a
+                  href={photo.src.original}
+                  target="_blank"
+                  rel="noreferrer"
+                  title="See the original photo in a new tab"
+                >
+                  <img
+                    src={photo.src.landscape}
+                    alt={photo.alt}
+                    className="img-fluid"
+                  />
+                </a>
               </div>
             );
           })}
