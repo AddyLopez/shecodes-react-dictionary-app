@@ -2,7 +2,7 @@ import Dictionary from "./Dictionary";
 import Footer from "./Footer";
 import "./styles/App.css";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <header>
@@ -13,5 +13,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

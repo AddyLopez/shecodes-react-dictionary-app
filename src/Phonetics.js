@@ -13,6 +13,8 @@ export default function Phonetics(props) {
       loop: false,
       preload: true,
       volume: 1.0,
+      autoSuspend: true,
+      html5PoolSize: 10,
     });
 
     return (
