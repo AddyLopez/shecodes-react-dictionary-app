@@ -5,16 +5,15 @@ import { faCirclePlay } from "@fortawesome/free-solid-svg-icons";
 import "./styles/Phonetics.css";
 
 export default function Phonetics(props) {
-  console.log(props.phonetics);
   if (props.phonetics.audio.length > 0) {
     const sound = new Howl({
-      src: [props.phonetics.audio],
+      autoSuspend: true,
       html5: true,
+      html5PoolSize: 10,
       loop: false,
       preload: true,
+      src: [props.phonetics.audio],
       volume: 1.0,
-      autoSuspend: true,
-      html5PoolSize: 10,
     });
 
     return (

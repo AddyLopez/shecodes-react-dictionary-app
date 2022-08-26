@@ -7,6 +7,10 @@ export default function Synonym(props) {
   if (props.synonyms && props.synonyms.length > 0) {
     return (
       <dd className="Synonym">
+        <div>
+          (Double-click on a button to search for a related term. If nothing
+          happens, the term is not included in this dictionary.)
+        </div>
         <span>Similar term(s):</span>
         {props.synonyms.map((synonym, index) => {
           const handleClick = (event) => {

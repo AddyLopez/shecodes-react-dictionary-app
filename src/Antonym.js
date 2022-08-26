@@ -7,6 +7,10 @@ export default function Antonym(props) {
   if (props.antonyms && props.antonyms.length > 0) {
     return (
       <dd className="Antonym">
+        <div>
+          (Double-click on a button to search for a related term. If nothing
+          happens, the term is not included in this dictionary.)
+        </div>
         <span>Antonym(s):</span>
         {props.antonyms.map((antonym, index) => {
           const handleClick = (event) => {
