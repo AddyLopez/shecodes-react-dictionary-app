@@ -8,10 +8,14 @@
 .Example .example-indicator {
   font-style: normal;
   font-weight: 600;
-  color: #0000008f;
+  color: hsla(0, 0%, 0%, 0.56);
 }
 .Example strong {
   font-weight: 700;
-  color: black;
+  color: hsl(0, 0%, 0%);
   opacity: 1;
+}
+.Example::selection {
+  background-color: hsl(16, 100%, 50%);
+  color: hsl(0, 0%, 100%);
 }

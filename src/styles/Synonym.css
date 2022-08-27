@@ -1,29 +1,35 @@
 .Synonym {
+  border-top: 1px dotted hsl(0deg 0% 0% / 49%);
   margin-inline-start: 20px;
-  border-top: 1px dashed black;
-  padding-top: 25px;
   margin-top: 25px;
+  padding-top: 25px;
 }
 
 .Synonym span {
-  opacity: 0.6;
+  color: hsla(0, 0%, 0%, 0.56);
   font-size: 19px;
+  font-weight: 600;
 }
 .Synonym button {
-  border-radius: 6px;
-  margin: 4px 0 4px 6px;
-  padding: 6px;
-  opacity: 0.6;
+  background-color: hsl(0, 0%, 100%);
+  border: 1px solid hsl(243deg 100% 50% / 63%);
+  border-radius: 12px;
+  color: hsl(243deg 100% 50% / 63%);
   font-weight: 500;
+  margin: 4px 0 4px 6px;
+  padding: 6px 8px;
 }
 
 .Synonym button:hover {
+  background-color: hsl(243deg 100% 50% / 63%);
+  color: hsl(0, 0%, 100%);
   cursor: pointer;
-  color: white;
-  background-color: darkgray;
+  transition: all 450ms ease-in-out;
 }
 
 .Synonym div {
+  color: hsla(0, 0%, 0%, 0.56);
   font-size: 12px;
+  font-weight: 600;
   margin-top: 10px;
 }

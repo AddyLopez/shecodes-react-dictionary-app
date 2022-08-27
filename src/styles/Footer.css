@@ -1,6 +1,10 @@
 .Footer {
   background-color: hsl(0, 0%, 100%);
+  border: 1px solid hsl(0deg 0% 0% / 49%);
   border-radius: 6px;
+  box-shadow: 1px 1px 2px hsl(0, 0%, 0%);
+  font-weight: bold;
+  font-size: 18px;
   letter-spacing: 1px;
   margin: 10px;
   padding: 25px;
@@ -8,12 +12,26 @@
 }
 
 .Footer a {
+  color: hsl(243deg 100% 50% / 63%);
   text-decoration: none;
 }
-
+.Footer a::visited {
+  color: hsl(243deg 100% 50% / 63%);
+}
 .Footer a:hover {
+  color: hsl(243deg 100% 50% / 63%);
   text-decoration: underline;
 }
 .Footer a:active {
-  font-weight: bold;
+  font-weight: bolder;
+  color: hsl(16, 100%, 50%);
+}
+
+.Footer::selection {
+  background-color: hsl(16, 100%, 50%);
+  color: white;
+}
+.Footer a::selection {
+  background-color: hsl(243deg 100% 50% / 63%);
+  color: white;
 }

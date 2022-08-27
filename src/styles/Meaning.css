@@ -4,8 +4,18 @@
 
 .Meaning .part-of-speech {
   font-size: 28px;
+  font-weight: bold;
 }
 
 .Meaning .definition {
   margin-inline-start: 20px;
+}
+
+.Meaning dd::selection {
+  background-color: orangered;
+  color: white;
+}
+.Meaning .part-of-speech::selection {
+  background-color: orangered;
+  color: white;
 }

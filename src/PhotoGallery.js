@@ -2,9 +2,10 @@ import React from "react";
 import "./styles/PhotoGallery.css";
 
 export default function PhotoGallery(props) {
-  if (props.photos) {
+  if (props.photos && props.photos.length > 0) {
     return (
       <section className="PhotoGallery">
+        <h3>photo gallery</h3>
         <div className="container">
           <div className="row">
             {props.photos.map((photo, index) => {

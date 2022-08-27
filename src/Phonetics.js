@@ -20,7 +20,7 @@ export default function Phonetics(props) {
       <div className="Phonetics">
         <FontAwesomeIcon
           icon={faVolumeHigh}
-          className="play-icon"
+          className="volume-high-icon"
           type="button"
           onClick={() => {
             sound.play();
@@ -29,7 +29,7 @@ export default function Phonetics(props) {
             });
           }}
         />{" "}
-        {props.phonetics.text}
+        <span>{props.phonetics.text}</span>
       </div>
     );
   } else {

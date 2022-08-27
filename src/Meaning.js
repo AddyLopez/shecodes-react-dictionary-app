@@ -7,9 +7,7 @@ import "./styles/Meaning.css";
 export default function Meaning(props) {
   return (
     <div className="Meaning">
-      <dd className="part-of-speech">
-        <strong>{props.meaning.partOfSpeech}</strong>
-      </dd>
+      <dd className="part-of-speech">{props.meaning.partOfSpeech}</dd>
       {props.meaning.definitions.map((definition, index) => {
         /* Three notes on the code below:
           1) The index + 1 portion adds a numerical structure to the data that an ordered list element could not provide due to the map method used above.

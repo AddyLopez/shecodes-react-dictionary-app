@@ -1,7 +1,22 @@
 .Phonetics {
   font-size: 24px;
   margin-inline: 20px;
+  display: flex;
+  align-items: center;
 }
-.Phonetics .play-icon {
-  color: green;
+.Phonetics .volume-high-icon {
+  color: white;
+  background-color: hsl(243deg 100% 50% / 63%);
+  padding: 10px;
+  margin: 4px;
+  border-radius: 50%;
+}
+
+.Phonetics span {
+  padding: 0 5px;
+}
+.Phonetics::selection,
+.Phonetics span::selection {
+  background-color: orangered;
+  color: white;
 }

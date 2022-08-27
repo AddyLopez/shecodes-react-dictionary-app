@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import DictionaryEntry from "./DictionaryEntry";
 import PhotoGallery from "./PhotoGallery";
+import Footer from "./Footer";
 
 import "./styles/Dictionary.css";
 
@@ -10,6 +11,7 @@ export default function Dictionary(props) {
   const [entryData, setEntryData] = useState(null);
   const [loaded, setLoaded] = useState(false);
   const [photos, setPhotos] = useState(null);
+  const [background, setBackground] = useState(null);
 
   const handleDictionaryResponse = (response) => {
     setEntryData(response.data[0]);
@@ -17,6 +19,7 @@ export default function Dictionary(props) {
   };
   const handlePexelsResponse = (response) => {
     setPhotos(response.data.photos);
+    setBackground(response.data.photos[0].src.tiny);
   };
 
   const search = () => {
@@ -50,20 +53,31 @@ export default function Dictionary(props) {
 
   if (loaded) {
     return (
-      <div className="Dictionary">
-        <form onSubmit={handleSubmit}>
-          <input
-            type="search"
-            autoFocus={true}
-            onChange={updateSearchWord}
-            placeholder="Search for a word..."
-          />
-        </form>
-        <DictionaryEntry
-          entryData={entryData}
-          searchRelatedTerm={searchRelatedTerm}
-        />
-        <PhotoGallery photos={photos} />
+      <div
+        className="Dictionary"
+        style={{ backgroundImage: `url(${background})` }}
+      >
+        <div className="background-overlay">
+          <div className="inset-wrapper">
+            <header>
+              <h1>React Dictionary Application</h1>
+              <form onSubmit={handleSubmit}>
+                <input
+                  type="search"
+                  autoFocus={true}
+                  onChange={updateSearchWord}
+                  placeholder="Search for a word..."
+                />
+              </form>
+            </header>
+            <DictionaryEntry
+              entryData={entryData}
+              searchRelatedTerm={searchRelatedTerm}
+            />
+            <PhotoGallery photos={photos} />
+            <Footer />
+          </div>
+        </div>
       </div>
     );
   } else {
