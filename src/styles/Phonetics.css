@@ -5,7 +5,7 @@
   align-items: center;
 }
 .Phonetics .volume-high-icon {
-  color: white;
+  color: hsl(0, 0%, 100%);
   background-color: hsl(243deg 100% 50% / 63%);
   padding: 10px;
   margin: 4px;
@@ -17,6 +17,6 @@
 }
 .Phonetics::selection,
 .Phonetics span::selection {
-  background-color: orangered;
+  background-color: hsl(16, 100%, 50%);
   color: white;
 }

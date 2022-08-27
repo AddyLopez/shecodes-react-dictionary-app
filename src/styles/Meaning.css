@@ -12,10 +12,10 @@
 }
 
 .Meaning dd::selection {
-  background-color: orangered;
-  color: white;
+  background-color: hsl(16, 100%, 50%);
+  color: hsl(0, 0%, 100%);
 }
 .Meaning .part-of-speech::selection {
-  background-color: orangered;
-  color: white;
+  background-color: hsl(16, 100%, 50%);
+  color: hsl(0, 0%, 100%);
 }
