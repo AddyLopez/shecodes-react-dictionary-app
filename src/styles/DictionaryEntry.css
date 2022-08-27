@@ -1,10 +1,9 @@
 .DictionaryEntry dt {
-  font-size: 30px;
-  margin: 20px 0 15px 0;
+  font-size: 36px;
 }
 
 .DictionaryEntry .section-wrapper {
-  background-color: lightgreen;
+  background-color: hsl(0, 0%, 100%);
   border-radius: 6px;
   margin: 10px;
   padding: 25px;

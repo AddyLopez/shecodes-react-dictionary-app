@@ -1,5 +1,6 @@
 .Phonetics {
   font-size: 24px;
+  margin-inline: 20px;
 }
 .Phonetics .play-icon {
   color: green;

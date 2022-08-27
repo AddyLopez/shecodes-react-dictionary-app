@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import DictionaryEntry from "./DictionaryEntry";
 import PhotoGallery from "./PhotoGallery";
+
 import "./styles/Dictionary.css";
 
 export default function Dictionary(props) {
@@ -55,7 +56,7 @@ export default function Dictionary(props) {
             type="search"
             autoFocus={true}
             onChange={updateSearchWord}
-            placeholder="Search for a word"
+            placeholder="Search for a word..."
           />
         </form>
         <DictionaryEntry

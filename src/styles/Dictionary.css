@@ -3,10 +3,10 @@
 }
 
 .Dictionary input {
-  background-color: lightgreen;
-  border: 2px solid gainsboro;
+  background-color: white;
+  border: 2px solid hsl(0deg 0% 0% / 49%);
   border-radius: 12px;
-  box-shadow: 1px 1px 1px grey;
+  box-shadow: 1px 1px 1px hsl(0deg 0% 0% / 89%);
   color: black;
   font-size: 24px;
   padding: 4px;

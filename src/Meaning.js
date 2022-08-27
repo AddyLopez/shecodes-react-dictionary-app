@@ -18,7 +18,8 @@ export default function Meaning(props) {
         return (
           <div key={index}>
             <dd className="definition">
-              {index + 1}. {definition.definition}
+              {index + 1}.{"  "}
+              {definition.definition}
             </dd>
             <Example example={definition.example} word={props.word} />
           </div>

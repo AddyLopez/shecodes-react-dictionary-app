@@ -1,5 +1,12 @@
+.PhotoGallery {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 6px;
+  margin: 10px;
+  padding: 40px 25px 20px 25px;
+}
+
 .PhotoGallery img {
   border-radius: 4px;
   border: 6px solid black;
-  margin-bottom: 20px;
+  margin-bottom: 23px;
 }

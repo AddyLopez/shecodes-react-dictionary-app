@@ -1,5 +1,8 @@
 .Synonym {
   margin-inline-start: 20px;
+  border-top: 1px dashed black;
+  padding-top: 25px;
+  margin-top: 25px;
 }
 
 .Synonym span {
@@ -18,4 +21,9 @@
   cursor: pointer;
   color: white;
   background-color: darkgray;
+}
+
+.Synonym div {
+  font-size: 12px;
+  margin-top: 10px;
 }
