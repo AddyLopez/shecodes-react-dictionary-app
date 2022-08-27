@@ -1,7 +1,7 @@
 import React from "react";
 import { Howl } from "howler";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCirclePlay } from "@fortawesome/free-solid-svg-icons";
+import { faVolumeHigh } from "@fortawesome/free-solid-svg-icons";
 import "./styles/Phonetics.css";
 
 export default function Phonetics(props) {
@@ -19,7 +19,7 @@ export default function Phonetics(props) {
     return (
       <div className="Phonetics">
         <FontAwesomeIcon
-          icon={faCirclePlay}
+          icon={faVolumeHigh}
           className="play-icon"
           type="button"
           onClick={() => {

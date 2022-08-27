@@ -51,7 +51,12 @@ export default function Dictionary(props) {
     return (
       <div className="Dictionary">
         <form onSubmit={handleSubmit}>
-          <input type="search" autoFocus={true} onChange={updateSearchWord} />
+          <input
+            type="search"
+            autoFocus={true}
+            onChange={updateSearchWord}
+            placeholder="Search for a word"
+          />
         </form>
         <DictionaryEntry
           entryData={entryData}
