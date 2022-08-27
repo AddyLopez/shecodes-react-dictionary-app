@@ -8,18 +8,21 @@ export default function DictionaryEntry(props) {
     return (
       <main className="DictionaryEntry">
         <dl>
-          <dt>{props.entryData.word}</dt>
-          {props.entryData.phonetics.map((phonetics, index) => {
-            return <Phonetics phonetics={phonetics} key={index} />;
-          })}
+          <div className="section-wrapper">
+            <dt>{props.entryData.word}</dt>
+            {props.entryData.phonetics.map((phonetics, index) => {
+              return <Phonetics phonetics={phonetics} key={index} />;
+            })}
+          </div>
           {props.entryData.meanings.map((meaning, index) => {
             return (
-              <Meaning
-                word={props.entryData.word}
-                meaning={meaning}
-                searchRelatedTerm={props.searchRelatedTerm}
-                key={index}
-              />
+              <div className="section-wrapper" key={index}>
+                <Meaning
+                  word={props.entryData.word}
+                  meaning={meaning}
+                  searchRelatedTerm={props.searchRelatedTerm}
+                />
+              </div>
             );
           })}
         </dl>

@@ -2,3 +2,10 @@
   font-size: 30px;
   margin: 20px 0 15px 0;
 }
+
+.DictionaryEntry .section-wrapper {
+  background-color: lightgreen;
+  border-radius: 6px;
+  margin: 10px;
+  padding: 25px;
+}
