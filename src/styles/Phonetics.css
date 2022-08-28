@@ -1,6 +1,6 @@
 .Phonetics {
   font-size: 24px;
-  margin-inline: 20px;
+  margin-inline-start: 20px;
   display: flex;
   align-items: center;
 }
