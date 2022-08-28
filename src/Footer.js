@@ -12,7 +12,7 @@ export default function Footer() {
       >
         Open-source code
       </a>{" "}
-      by{" "}
+      and design by{" "}
       <a
         href="https://ubiquitous-froyo-69b6d7.netlify.app/index.html"
         title="To Addy's personal website"
