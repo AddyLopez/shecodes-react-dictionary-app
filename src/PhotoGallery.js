@@ -5,7 +5,7 @@ export default function PhotoGallery(props) {
   if (props.photos && props.photos.length > 0) {
     return (
       <section className="PhotoGallery">
-        <h3>photo gallery</h3>
+        <h2>photo gallery</h2>
         <div className="container">
           <div className="row">
             {props.photos.map((photo, index) => {

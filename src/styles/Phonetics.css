@@ -3,6 +3,7 @@
   margin-inline-start: 20px;
   display: flex;
   align-items: center;
+  font-family: Georgia, Times, "Times New Roman", serif;
 }
 .Phonetics .volume-high-icon {
   color: hsl(0, 0%, 100%);
@@ -19,4 +20,10 @@
 .Phonetics span::selection {
   background-color: hsl(16, 100%, 50%);
   color: white;
+}
+
+@media only screen and (max-width: 576px) {
+  .Phonetics .volume-high-icon {
+    padding: 7px;
+  }
 }
