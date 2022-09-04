@@ -15,7 +15,11 @@
   color: hsl(0, 0%, 0%);
   opacity: 1;
 }
-.Example::selection {
-  background-color: hsl(16, 100%, 50%);
+.Example span::selection {
+  background-color: hsl(237, 84%, 78%);
+  color: hsl(0, 0%, 100%);
+}
+.Example strong::selection {
+  background-color: hsl(43, 93%, 50%);
   color: hsl(0, 0%, 100%);
 }
