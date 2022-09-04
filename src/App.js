@@ -61,6 +61,7 @@ export default function App(props) {
                 <input
                   type="search"
                   autoFocus={true}
+                  className="form-control"
                   onChange={updateSearchWord}
                   placeholder="Search for a word..."
                 />
