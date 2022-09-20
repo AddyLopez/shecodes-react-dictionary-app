@@ -48,7 +48,7 @@ Created using InVision, a whiteboarding tool useful for planning product design.
 
 ## Preview
 
-![Screenshot preview of React Dictionary Application](src/preview/react-dictionary-application.png)
+![Screenshot preview of React Dictionary Application](src/preview/react-dictionary-application-screenshot.png)
 
 ## Attributions
 
