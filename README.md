@@ -64,7 +64,7 @@ Created using InVision, a whiteboarding tool useful for planning product design.
 
 ## Attributions
 
-**_For comparison:_** Design inspired by the SheCodes React demo: [https://www.dictionary.shecodes.io/)](https://www.dictionary.shecodes.io/)
+**_For comparison:_** Design inspired by the SheCodes React demo: [https://www.dictionary.shecodes.io/](https://www.dictionary.shecodes.io/)
 
 **_Free Dictionary API:_** [https://github.com/meetDeveloper/freeDictionaryAPI](https://github.com/meetDeveloper/freeDictionaryAPI)
 
