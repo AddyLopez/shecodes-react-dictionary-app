@@ -8,7 +8,7 @@ Student project for SheCodes React coding workshop.
 
 **_Learning objective:_** To create a dictionary application using React. This application integrates with a dictionary API and the Pexels API to display images based on the word submitted.
 
-## Baseline Features
+## Baseline Coding Features
 
 - Built entirely in React (using techniques such as props, state managment, hooks, JS closures, events, loops, conditional rendering)
 
@@ -16,21 +16,23 @@ Student project for SheCodes React coding workshop.
 
 - Clean JSX using semantic HTML tags (conscientiously coded with accessibility concerns, SEO, legibility, and maintainability in mind)
 
+- Integration with the Free Dictionary API (for the definitions) and the Pexels API (for the images) using AJAX
+
 - Responsive CSS, with extensive testing for devices of all sizes (in both portrait and landscape modes) using the toggle device toolbar in Google Chrome's DevTools
 
 - Bootstrap grid
 
-- Integration with the Free Dictionary API (for the definitions) and the Pexels API (for the images) using AJAX
-
-- Use of the terminal, Node.js, and NPM
-
-- Prototyping in the browser and debugging with Google Chrome's DevTools and React extension.
+#### Accessibility and Workflow Considerations
 
 - Use of accessibility tools included in Google Chrome's DevTools, to ensure sufficient contrast ratios on par with the standard Web Content Accessibility Guidelines.
 
 - Accessibility rating by Lighthouse audit: 91/100 for desktop, 91/100 for mobile devices
 
 - Professional product development planning, using InVision's whiteboarding tool to design a wireframe (see below) prior to coding
+
+- Use of the terminal, Node.js, and NPM
+
+- Prototyping in the browser and debugging with Google Chrome's DevTools and React extension.
 
 - Coded in VS Code using professional development workflow tools, such GitHub Desktop, and processes, such as continuous deployment, with hosting on Netlify
 
