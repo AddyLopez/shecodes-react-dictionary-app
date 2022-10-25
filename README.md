@@ -46,7 +46,7 @@ Student project for SheCodes React coding workshop.
 
 - Detailed textual styling for maximal intelligibility, including proper numerical indices for each definition, clear indications of and partitions for each part of speech, differentiation between definitions and example sentences, consistent indentations, and keyword emphasis (learn more below)
 
-- More about keyword emphasis: Whenever a word is searched, wherever it appears in an example sentence, it is rendered in boldface. This is a special and complicated feature that I designed on my own to lend greater star power to the search word. My code accounts for most instances of the keyword: when it is capitalized, when it appears more than once in an example sentence, and when it is used in a different verb tense. The exception is when the verb tense transforms the root form of the word.
+- More about keyword emphasis: Whenever a word is searched, wherever it appears in an example sentence, it is rendered in boldface. This is a special and complicated feature that I designed on my own to lend greater star power to the search word. My code accounts for most instances of the keyword: when it is capitalized, when it appears more than once in an example sentence, when it is pluralized (without altering the root form), and when it is used in a different verb tense. The exception is when the verb tense transforms the root form of the word.
 
 - Synonyms and antonyms styled as buttons that will conduct a new search upon a double-click. Here is another experimental feature I built that enables a re-rendering of the page without refreshing it. The newly rendered page will display the search results for the related term that was double-clicked upon, given that the term is searchable, or valid, in the Free Dictionary API. If the search term is a valid term for the Pexels API, the background image will also be updated.
 
@@ -62,10 +62,13 @@ Created using InVision, a whiteboarding tool useful for planning product design.
 
 ## Project Previews
 
-Featuring fun, dynamic, data-driven mosaic backgrounds, definitions for multiple parts of speech with example sentences, detailed textual styling with keyword emphasis for multiple parts of speech, in-app phonetic audio samples, buttons to search for related terms (when available), and a playful photo gallery as a visual complement to the search term:
+Featuring fun and dynamic, data-driven mosaic backgrounds; definitions for multiple parts of speech with example sentences; detailed textual styling with smart keyword emphasis; in-app phonetic audio samples; buttons to search for related terms (when available); and a playful photo gallery as a visual complement to the search term:
 
 ![Screenshot preview of React Dictionary Application](src/preview/dictionary-app-preview-jellyfish-1.png)
 ![Screenshot preview of React Dictionary Application](src/preview/dictionary-app-preview-jellyfish-2.png)
+
+---
+
 ![Screenshot preview of React Dictionary Application](src/preview/dictionary-app-preview-stretch-1.png)
 ![Screenshot preview of React Dictionary Application](src/preview/dictionary-app-preview-stretch-2.png)
 
