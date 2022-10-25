@@ -60,10 +60,14 @@ Created using InVision, a whiteboarding tool useful for planning product design.
 
 ![InVision Wireframe for React Dictionary Application](src/wireframe/react-dictionary-application-wireframe.png)
 
-## Preview
+## Project Previews
+
+Featuring dynamic, data-driven mosaic backgrounds, definitions for multiple parts of speech with example sentences, detailed textual styling with keyword emphasis for multiple parts of speech, in-app phonetic audio samples, buttons to search for related terms (when available), and a playful photo gallery as a visual complement to the search term:
 
 ![Screenshot preview of React Dictionary Application](src/preview/dictionary-app-preview-jellyfish-1.png)
 ![Screenshot preview of React Dictionary Application](src/preview/dictionary-app-preview-jellyfish-2.png)
+![Screenshot preview of React Dictionary Application](src/preview/dictionary-app-preview-stretch-1.png)
+![Screenshot preview of React Dictionary Application](src/preview/dictionary-app-preview-stretch-2.png)
 
 ## Attributions
 
