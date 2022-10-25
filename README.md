@@ -62,8 +62,8 @@ Created using InVision, a whiteboarding tool useful for planning product design.
 
 ## Preview
 
-![Screenshot preview of React Dictionary Application](src/preview/react-dictionary-app-jellyfish-1.png)
-![Screenshot preview of React Dictionary Application](src/preview/react-dictionary-app-jellyfish-2.png)
+![Screenshot preview of React Dictionary Application](src/preview/react-dictionary-app-preview-jellyfish-1.png)
+![Screenshot preview of React Dictionary Application](src/preview/react-dictionary-app-preview-jellyfish-2.png)
 
 ## Attributions
 
