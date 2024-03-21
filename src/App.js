@@ -18,8 +18,6 @@ export default function App(props) {
     setLoaded(true);
   };
   const handlePexelsResponse = (response) => {
-    console.log(response);
-    console.log(response.photos);
     setPhotos(response.photos);
     setBackground(response.photos[0].src.tiny);
   };
@@ -34,7 +32,7 @@ export default function App(props) {
     const client = createClient(pexelsApiKey);
     client.photos
       .search({ query: searchWord, per_page: 9 })
-      .then((photos) => handlePexelsResponse(photos));
+      .then(handlePexelsResponse);
   };
 
   const updateSearchWord = (event) => {
