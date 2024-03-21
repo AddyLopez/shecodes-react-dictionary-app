@@ -16,7 +16,9 @@ export default function App(props) {
   const handlePexelsResponse = (response) => {
     console.log(response);
     setPhotos(response.photos);
-    setBackground(response.photos[0].src.tiny);
+    if (response.photos.length > 0) {
+      setBackground(response.photos[0].src.tiny);
+    }
   };
 
   useEffect(() => {
@@ -29,16 +31,25 @@ export default function App(props) {
     const client = createClient(pexelsApiKey);
     client.photos
       .search({ query: searchWord, per_page: 9 })
-      .then(handlePexelsResponse);
+      .then(handlePexelsResponse)
+      .catch((error) => console.log(error.response));
   }, [entryData]);
 
   const handleDictionaryResponse = (response) => {
-    setEntryData(response.data[0]);
+    if (response.data) {
+      setEntryData(response.data[0]);
+    }
   };
 
   const search = () => {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${searchWord}`;
-    axios.get(apiUrl).then(handleDictionaryResponse);
+    axios
+      .get(apiUrl)
+      .then(handleDictionaryResponse)
+      .catch((error) => {
+        console.log(error.response);
+        alert(error.response.data.title);
+      });
   };
 
   const updateSearchWord = (event) => {
