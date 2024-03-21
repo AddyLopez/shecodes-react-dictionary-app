@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { createClient } from "pexels";
 import DictionaryEntry from "./DictionaryEntry";
@@ -13,26 +13,29 @@ export default function App(props) {
   const [photos, setPhotos] = useState(null);
   const [background, setBackground] = useState(null);
 
-  const handleDictionaryResponse = (response) => {
-    setEntryData(response.data[0]);
-    setLoaded(true);
-  };
   const handlePexelsResponse = (response) => {
+    console.log(response);
     setPhotos(response.photos);
     setBackground(response.photos[0].src.tiny);
   };
 
-  const search = () => {
-    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${searchWord}`;
-    axios.get(apiUrl).then(handleDictionaryResponse);
-
-    let pexelsApiKey =
-      "563492ad6f917000010000015888ae2855384a059cdc24187c49a20d";
+  useEffect(() => {
+    let pexelsApiKey = process.env.REACT_APP_PEXELS_API_KEY;
     // Example of Pexels API URL = `https://api.pexels.com/v1/search?query=${searchWord}&per_page=9`;
     const client = createClient(pexelsApiKey);
     client.photos
       .search({ query: searchWord, per_page: 9 })
       .then(handlePexelsResponse);
+  }, [entryData]);
+
+  const handleDictionaryResponse = (response) => {
+    setEntryData(response.data[0]);
+    setLoaded(true);
+  };
+
+  const search = () => {
+    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${searchWord}`;
+    axios.get(apiUrl).then(handleDictionaryResponse);
   };
 
   const updateSearchWord = (event) => {
