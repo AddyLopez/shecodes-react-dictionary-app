@@ -20,6 +20,10 @@ export default function App(props) {
   };
 
   useEffect(() => {
+    setLoaded(true);
+  }, []);
+
+  useEffect(() => {
     let pexelsApiKey = process.env.REACT_APP_PEXELS_API_KEY;
     // Example of Pexels API URL = `https://api.pexels.com/v1/search?query=${searchWord}&per_page=9`;
     const client = createClient(pexelsApiKey);
@@ -30,7 +34,6 @@ export default function App(props) {
 
   const handleDictionaryResponse = (response) => {
     setEntryData(response.data[0]);
-    setLoaded(true);
   };
 
   const search = () => {
