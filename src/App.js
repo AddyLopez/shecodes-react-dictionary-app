@@ -14,7 +14,6 @@ export default function App(props) {
   const [background, setBackground] = useState(null);
 
   const handlePexelsResponse = (response) => {
-    console.log(response);
     setPhotos(response.photos);
     if (response.photos.length > 0) {
       setBackground(response.photos[0].src.tiny);
@@ -36,9 +35,7 @@ export default function App(props) {
   }, [entryData]);
 
   const handleDictionaryResponse = (response) => {
-    if (response.data) {
-      setEntryData(response.data[0]);
-    }
+    setEntryData(response.data[0]);
   };
 
   const search = () => {
