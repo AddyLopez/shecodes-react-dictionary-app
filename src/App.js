@@ -22,7 +22,7 @@ export default function App(props) {
 
   useEffect(() => {
     setLoaded(true);
-  }, [searchWord]);
+  }, []);
 
   useEffect(() => {
     let pexelsApiKey = process.env.REACT_APP_PEXELS_API_KEY;
@@ -32,7 +32,7 @@ export default function App(props) {
       .search({ query: searchWord, per_page: 9 })
       .then(handlePexelsResponse)
       .catch((error) => console.log(error.response));
-  }, [entryData]);
+  }, [entryData, searchWord]);
 
   const handleDictionaryResponse = (response) => {
     setEntryData(response.data[0]);
