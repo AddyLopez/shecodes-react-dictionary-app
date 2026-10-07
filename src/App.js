@@ -22,7 +22,7 @@ export default function App(props) {
 
   useEffect(() => {
     setLoaded(true);
-  }, []);
+  }, [searchWord]);
 
   useEffect(() => {
     let pexelsApiKey = process.env.REACT_APP_PEXELS_API_KEY;
