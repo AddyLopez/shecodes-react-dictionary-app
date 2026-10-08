@@ -58,7 +58,6 @@ export default function App({ defaultSearchWord }) {
   };
 
   const handleSubmit = (event) => {
-    console.log(event);
     event.preventDefault();
     event.target.reset(); // Resets the form so that the searchWord will not persist in the input across renderings!
     search();
