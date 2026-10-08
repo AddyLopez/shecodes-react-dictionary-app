@@ -3,7 +3,6 @@ import "./styles/Antonym.css";
 
 export default function Antonym({ antonyms, searchRelatedTerm }) {
   // This conditional rendering accounts for the presence or absence of the "antonyms" category under "definitions," passed into this component as "props.antonyms.""
-
   if (antonyms.length > 0) {
     return (
       <dd className="Antonym">
