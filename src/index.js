@@ -7,6 +7,6 @@ import "./styles/index.css";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App defaultSearchWord="stretch" />
-  </React.StrictMode>
+    <App defaultSearchWord="glitch" />
+  </React.StrictMode>,
 );
