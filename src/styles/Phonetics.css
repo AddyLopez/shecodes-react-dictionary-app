@@ -1,9 +1,14 @@
 .Phonetics {
-  font-size: 24px;
-  margin-inline-start: 20px;
-  display: flex;
   align-items: center;
+  border-bottom: 1px dotted hsl(0deg 0% 0% / 54%);
+  color: hsla(0, 0%, 0%, 0.56);
+  display: flex;
   font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 24px;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+  margin-inline-start: 20px;
+  margin-bottom: 10px;
 }
 .Phonetics .volume-high-icon {
   color: hsl(0, 0%, 100%);
