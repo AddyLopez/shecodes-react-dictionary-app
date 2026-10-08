@@ -3,7 +3,6 @@ import "./styles/Synonym.css";
 
 export default function Synonym({ synonyms, searchRelatedTerm }) {
   // This conditional rendering accounts for the presence or absence of the "synonyms" category under "definitions," passed into this component as "props.synonyms.""
-
   if (synonyms.length > 0) {
     return (
       <dd className="Synonym">
