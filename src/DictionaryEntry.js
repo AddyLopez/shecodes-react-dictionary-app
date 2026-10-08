@@ -1,26 +1,22 @@
 import React from "react";
 import Meaning from "./Meaning";
-import Phonetics from "./Phonetics";
 import "./styles/DictionaryEntry.css";
 
-export default function DictionaryEntry(props) {
-  if (props.entryData) {
+export default function DictionaryEntry({ entryData, searchRelatedTerm }) {
+  if (entryData) {
     return (
       <main className="DictionaryEntry">
         <dl>
           <div className="section-wrapper">
-            <dt>{props.entryData.word}</dt>
-            {props.entryData.phonetics.map((phonetics, index) => {
-              return <Phonetics phonetics={phonetics} key={index} />;
-            })}
+            <dt>{entryData.word}</dt>
           </div>
-          {props.entryData.meanings.map((meaning, index) => {
+          {entryData.entries.map((entry, index) => {
             return (
               <div className="section-wrapper" key={index}>
                 <Meaning
-                  word={props.entryData.word}
-                  meaning={meaning}
-                  searchRelatedTerm={props.searchRelatedTerm}
+                  word={entryData.word}
+                  entry={entry}
+                  searchRelatedTerm={searchRelatedTerm}
                 />
               </div>
             );
