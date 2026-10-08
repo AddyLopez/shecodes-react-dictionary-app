@@ -27,8 +27,8 @@ export default function Footer() {
       <p className="api-attributions dictionary-attribution">
         Definitions courtesy of{" "}
         <a
-          href="https://github.com/meetDeveloper/freeDictionaryAPI"
-          title="To Free Dictioanry API documentation on GitHub"
+          href="https://freedictionaryapi.com/"
+          title="To Free Dictioanry API documentation"
           target="_blank"
           rel="noreferrer"
         >
