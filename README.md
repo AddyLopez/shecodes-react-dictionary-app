@@ -69,9 +69,6 @@ Featuring fun and dynamic, data-driven mosaic backgrounds; definitions for multi
 
 ---
 
-![Screenshot preview of React Dictionary Application](src/preview/dictionary-app-preview-stretch-1.png)
-![Screenshot preview of React Dictionary Application](src/preview/dictionary-app-preview-stretch-2.png)
-
 ## Attributions
 
 **_For comparison:_** Design inspired by the SheCodes React demo: [https://www.dictionary.shecodes.io/](https://www.dictionary.shecodes.io/)
