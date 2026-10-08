@@ -24,15 +24,19 @@ export default function App({ defaultSearchWord }) {
     setLoaded(true);
   }, []);
 
-  useEffect(() => {
-    let pexelsApiKey = process.env.REACT_APP_PEXELS_API_KEY;
-    // Example of Pexels API URL = `https://api.pexels.com/v1/search?query=${searchWord}&per_page=9`;
-    const client = createClient(pexelsApiKey);
-    client.photos
-      .search({ query: searchWord, per_page: 9 })
-      .then(handlePexelsResponse)
-      .catch((error) => console.log(error.response));
-  }, [entryData]);
+  useEffect(
+    () => {
+      let pexelsApiKey = process.env.REACT_APP_PEXELS_API_KEY;
+      // Example of Pexels API URL = `https://api.pexels.com/v1/search?query=${searchWord}&per_page=9`;
+      const client = createClient(pexelsApiKey);
+      client.photos
+        .search({ query: searchWord, per_page: 9 })
+        .then(handlePexelsResponse)
+        .catch((error) => console.log(error.response));
+    },
+    //eslint-disable-next-line react-hooks/exhaustive-deps
+    [entryData],
+  );
 
   const handleDictionaryResponse = (response) => {
     setEntryData(response.data);
