@@ -6,8 +6,8 @@ import PhotoGallery from "./PhotoGallery";
 import Footer from "./Footer";
 import "./styles/App.css";
 
-export default function App(props) {
-  const [searchWord, setSearchWord] = useState(props.defaultSearchWord);
+export default function App({ defaultSearchWord }) {
+  const [searchWord, setSearchWord] = useState(defaultSearchWord);
   const [entryData, setEntryData] = useState(null);
   const [loaded, setLoaded] = useState(false);
   const [photos, setPhotos] = useState(null);
@@ -32,14 +32,14 @@ export default function App(props) {
       .search({ query: searchWord, per_page: 9 })
       .then(handlePexelsResponse)
       .catch((error) => console.log(error.response));
-  }, [entryData, searchWord]);
+  }, [entryData]);
 
   const handleDictionaryResponse = (response) => {
-    setEntryData(response.data[0]);
+    setEntryData(response.data);
   };
 
   const search = () => {
-    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${searchWord}`;
+    let apiUrl = `https://freedictionaryapi.com/api/v1/entries/en/${searchWord}`; // Change of API to Free Dictionary API: https://freedictionaryapi.com/
     axios
       .get(apiUrl)
       .then(handleDictionaryResponse)
@@ -54,6 +54,7 @@ export default function App(props) {
   };
 
   const handleSubmit = (event) => {
+    console.log(event);
     event.preventDefault();
     event.target.reset(); // Resets the form so that the searchWord will not persist in the input across renderings!
     search();
