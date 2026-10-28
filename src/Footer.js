@@ -13,15 +13,7 @@ export default function Footer() {
         >
           Open-source code
         </a>{" "}
-        and design by{" "}
-        <a
-          href="https://ubiquitous-froyo-69b6d7.netlify.app/index.html"
-          title="To Addy's personal website"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Addy López
-        </a>
+        and design by Addy López
       </p>
 
       <p className="api-attributions dictionary-attribution">
